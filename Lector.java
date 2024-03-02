@@ -7,7 +7,7 @@ public class Lector {
 
     String archivo = "cards_desc.txt";
 
-    public <K, V> Map<K, V> leerDatosArchivo(String archivo, Map<K, V> tipoMapa) {
+    public <K, V> Map<K, V> leerDatosArchivo(Map<K, V> tipoMapa) {
 
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
             String line;
