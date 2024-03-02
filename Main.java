@@ -1,4 +1,6 @@
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Main {
 
@@ -14,7 +16,7 @@ public class Main {
         Funcionalidades Funcionalidades = new Funcionalidades();
 
         String MapType = null;
-
+        Lector lector = new Lector();
 
         while(true){
             System.out.println("\n------------------------------------");
@@ -44,6 +46,7 @@ public class Main {
                     System.out.println("\nTreeMap");
                     MapType = "TreeMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
+                    Map<String, String> datosTreeMap = lector.leerDatosArchivo(new TreeMap<>());
                     break;
 
                 case "3":
