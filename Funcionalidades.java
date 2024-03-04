@@ -11,9 +11,9 @@ public class Funcionalidades {
 
     public void agregarNuevaCarta(Scanner scanner, Map<String, String> datosMapa) {
         System.out.println("\nAGREGAR NUEVA CARTAA");
-        System.out.println("- Ingrese el nombre de la nueva carta que desee agregar:");
+        System.out.print("- Ingrese el nombre de la nueva carta que desee agregar: ");
         String nombre = scanner.nextLine();
-        System.out.println("- Ingrese el tipo de la nueva carta:");
+        System.out.print("- Ingrese el tipo de la nueva carta: ");
         String tipo = scanner.nextLine();
         cartaMap.put(nombre, tipo);
         System.out.println("La carta ha sido agregada.");
@@ -21,7 +21,7 @@ public class Funcionalidades {
 
     public void buscarTipoCarta(Scanner scanner, Map<String, String> datosMapa) {
         System.out.println("\nBUSCAR CARTA");
-        System.out.println("- Ingrese el nombre de la carta que desea buscar:");
+        System.out.print("- Ingrese el nombre de la carta que desea buscar: ");
         String nombre = scanner.nextLine();
         String tipo = cartaMap.get(nombre);
         if (tipo != null) {
