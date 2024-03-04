@@ -40,6 +40,7 @@ public class Main {
                     System.out.println("\nHashMap");
                     MapType = "HashMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
+                    ImplementHashMap implementHashMap = new ImplementHashMap();
                     Map<String, String> datosHashMap = lector.leerDatosArchivo(FindMapType.createMap(MapType));
                     break;
 
