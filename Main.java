@@ -20,9 +20,9 @@ public class Main {
         Lector lector = new Lector();
 
         while (true) {
-            System.out.println("\n------------------------------------");
+            System.out.println("\n----------------------------------------------------");
             System.out.println(
-                    "\n Bienvenido al programa de registro de cartas. Por favor, seleccione cómo quiere implementar los Maps.");
+                    "Bienvenido al programa de registro de cartas.\n\n Seleccione cómo quiere implementar los Maps:");
             System.out.println("1. HashMap");
             System.out.println("2. TreeMap");
             System.out.println("3. LinkedHashMAp");
@@ -37,7 +37,7 @@ public class Main {
 
                 case "1":
                     // Implementación de HashMap
-                    System.out.println("\nHashMap");
+                    System.out.println("\n  - HashMap -");
                     MapType = "HashMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
                     ImplementHashMap implementHashMap = new ImplementHashMap();
@@ -46,7 +46,7 @@ public class Main {
 
                 case "2":
                     // Implementación de TreeMap
-                    System.out.println("\nTreeMap");
+                    System.out.println("\n  - TreeMap -");
                     MapType = "TreeMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
                     Map<String, String> datosTreeMap = lector.leerDatosArchivo(new TreeMap<>());
@@ -54,7 +54,7 @@ public class Main {
 
                 case "3":
                     // Implementación de LinkedHashMap
-                    System.out.println("\nLinkedHashMap");
+                    System.out.println("\n  - LinkedHashMap -");
                     MapType = "LinkedHashMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
                     break;
@@ -64,6 +64,7 @@ public class Main {
                         System.out.println("\nPor favor, seleccione previamente el tipo de implementación que desea.");
                     } else {
                         displayOptions2();
+                        System.out.print("\nIngrese la opción que desee: ");
                         String op2 = scan.nextLine();
 
                         switch (op2) {
