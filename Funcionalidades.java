@@ -35,7 +35,7 @@ public class Funcionalidades {
     public void showDesordenada() {
         System.out.println("\nCOLECCIÓN DE CARTAS (DESORDENADA)");
         for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
-            System.out.println("Nombre: " + entry.getKey() + ", Tipo: " + entry.getValue());
+            System.out.println("    Nombre: " + entry.getKey() + " - Tipo: " + entry.getValue());
         }
     }
 
@@ -49,14 +49,14 @@ public class Funcionalidades {
         }
         // cantidad
         for (Map.Entry<String, Integer> entry : tempMap.entrySet()) {
-            System.out.println("Tipo: " + entry.getKey() + ", Cantidad: " + entry.getValue());
+            System.out.println("    Tipo: " + entry.getKey() + " - Cantidad: " + entry.getValue());
         }
     }
 
     public void showToditas() {
         System.out.println("\nTODAS LAS CARTAS EXISTENTES");
         for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
-            System.out.println("Nombre: " + entry.getKey() + ", Tipo: " + entry.getValue());
+            System.out.println("Nombre: " + entry.getKey() + " - Tipo: " + entry.getValue());
         }
     }
 
