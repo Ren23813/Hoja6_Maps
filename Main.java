@@ -85,15 +85,18 @@ public class Main {
                                 break;
                             case "3":
                                 System.out.println("Usted seleccionó la opción de mostrar su colección (desordenada)");
+                                funcionalidades.showDesordenada();
 
                                 break;
                             case "4":
                                 System.out.println("Usted seleccionó la opción de mostrar su colección, según tipo");
+                                funcionalidades.showOrdenadaTipo();
 
                                 break;
                             case "5":
                                 System.out.println(
                                         "Usted seleccionó la opción de mostrar todas las cartas existentes (desordenada). ");
+                                funcionalidades.showToditas();
 
                                 break;
                             case "6":
