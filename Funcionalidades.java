@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Funcionalidades {
 
@@ -30,4 +31,33 @@ public class Funcionalidades {
             System.out.println("\nLa carta '" + nombre + "' no se ha encontrado.");
         }
     }
+
+    public void showDesordenada() {
+        System.out.println("\nCOLECCIÓN DE CARTAS (DESORDENADA)");
+        for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
+            System.out.println("Nombre: " + entry.getKey() + ", Tipo: " + entry.getValue());
+        }
+    }
+
+    public void showOrdenadaTipo() {
+        System.out.println("\nCOLECCIÓN DE CARTAS (ORDENADA POR TIPO)");
+        // las cartas por el tipo
+        Map<String, Integer> tempMap = new TreeMap<>();
+        // Contamos la cantidad de cada tipo de carta
+        for (String tipo : cartaMap.values()) {
+            tempMap.put(tipo, tempMap.getOrDefault(tipo, 0) + 1);
+        }
+        // cantidad
+        for (Map.Entry<String, Integer> entry : tempMap.entrySet()) {
+            System.out.println("Tipo: " + entry.getKey() + ", Cantidad: " + entry.getValue());
+        }
+    }
+
+    public void showToditas() {
+        System.out.println("\nTODAS LAS CARTAS EXISTENTES");
+        for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
+            System.out.println("Nombre: " + entry.getKey() + ", Tipo: " + entry.getValue());
+        }
+    }
+
 }
