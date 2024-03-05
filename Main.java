@@ -113,7 +113,7 @@ public class Main {
                     }
                     break;
                 case "5":
-                    System.out.println("Saliendo... ");
+                    System.out.println("-----");
                     System.exit(0);
                 default:
                     System.out.println("\nLa opción ingresada no es válida.");
