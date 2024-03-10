@@ -56,7 +56,7 @@ public class Funcionalidades {
     public void showToditas() {
         System.out.println("\nTODAS LAS CARTAS EXISTENTES");
         for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
-            System.out.println("Nombre: " + entry.getKey() + " - Tipo: " + entry.getValue());
+            System.out.println("    Nombre: " + entry.getKey() + " - Tipo: " + entry.getValue());
         }
     }
 

@@ -41,7 +41,7 @@ public class Main {
                     MapType = "HashMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
                     ImplementHashMap implementHashMap = new ImplementHashMap();
-                    Map<String, String> datosHashMap = lector.leerDatosArchivo(FindMapType.createMap(MapType));
+                    //Map<String, String> datosHashMap = lector.leerDatosArchivo(FindMapType.createMap(MapType));
                     datosMapa = lector.leerDatosArchivo(implementHashMap.createHashMap()); // se coloca a datosMapa
                     funcionalidades = new Funcionalidades(datosMapa);
                     break;
@@ -51,7 +51,7 @@ public class Main {
                     System.out.println("\n  - TreeMap -");
                     MapType = "TreeMap";
                     System.out.println("Tipo de stack seleccionado: " + MapType);
-                    Map<String, String> datosTreeMap = lector.leerDatosArchivo(new TreeMap<>());
+                    // Map<String, String> datosTreeMap = lector.leerDatosArchivo(new TreeMap<>());
                     break;
 
                 case "3":
