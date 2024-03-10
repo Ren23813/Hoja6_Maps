@@ -39,9 +39,8 @@ public class Main {
                     // Implementación de HashMap
                     System.out.println("\n  - HashMap -");
                     MapType = "HashMap";
-                    System.out.println("Tipo de stack seleccionado: " + MapType);
+                    System.out.println("Tipo de Mapa seleccionado: " + MapType);
                     ImplementHashMap implementHashMap = new ImplementHashMap();
-                    //Map<String, String> datosHashMap = lector.leerDatosArchivo(FindMapType.createMap(MapType));
                     datosMapa = lector.leerDatosArchivo(implementHashMap.createHashMap()); // se coloca a datosMapa
                     funcionalidades = new Funcionalidades(datosMapa);
                     break;
@@ -50,16 +49,21 @@ public class Main {
                     // Implementación de TreeMap
                     System.out.println("\n  - TreeMap -");
                     MapType = "TreeMap";
-                    System.out.println("Tipo de stack seleccionado: " + MapType);
-                    // Map<String, String> datosTreeMap = lector.leerDatosArchivo(new TreeMap<>());
+                    System.out.println("Tipo de Mapa seleccionado: " + MapType);
+                    ImplementTreeMap implementTreeMap = new ImplementTreeMap();
+                    datosMapa = lector.leerDatosArchivo(implementTreeMap.createTreeMap());
+                    funcionalidades = new Funcionalidades(datosMapa);
                     break;
 
                 case "3":
                     // Implementación de LinkedHashMap
                     System.out.println("\n  - LinkedHashMap -");
                     MapType = "LinkedHashMap";
-                    System.out.println("Tipo de stack seleccionado: " + MapType);
+                    System.out.println("Tipo de Mapa seleccionado: " + MapType);
+                    ImplementLinked implementLinked = new ImplementLinked();
+                    datosMapa = lector.leerDatosArchivo(implementLinked.createLinkedMap());
                     break;
+                
                 case "4":
                     // Segunda parte
                     if (MapType == null) {
@@ -102,7 +106,7 @@ public class Main {
                             case "6":
                                 System.out.println(
                                         "Usted seleccionó la opción demostrar todas las cartas del juego, ordenadas según tipo.");
-
+//FALTA 
                                 break;
 
                             default:
