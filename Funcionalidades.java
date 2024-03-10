@@ -83,4 +83,23 @@ public class Funcionalidades {
         }
     }
 
-}
+    public void showOrdenadasToditas(){
+        System.out.println("TODAS LAS CARTAS, POR TIPO");
+        for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
+            if (entry.getValue().equals("Hechizo")) {
+                System.out.println("Hechizo: " + entry.getKey());
+            }
+        }
+        for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
+            if (entry.getValue().equals("Trampa")) {
+                System.out.println("Trampa: " + entry.getKey());
+            }
+        }
+        for (Map.Entry<String, String> entry : cartaMap.entrySet()) {
+            if (entry.getValue().equals("Monstruo")) {
+                System.out.println("Monstruo: " + entry.getKey());
+            }
+        }
+    }
+    
+    }

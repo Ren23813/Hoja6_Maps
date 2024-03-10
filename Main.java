@@ -1,6 +1,5 @@
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class Main {
 
@@ -105,9 +104,8 @@ public class Main {
 
                                 break;
                             case "6":
-                                System.out.println(
-                                        "Usted seleccionó la opción demostrar todas las cartas del juego, ordenadas según tipo.");
-//FALTA 
+                                System.out.println("Usted seleccionó la opción demostrar todas las cartas del juego, ordenadas según tipo.");
+                                funcionalidades.showOrdenadasToditas();
                                 break;
 
                             default:
