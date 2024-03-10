@@ -62,6 +62,7 @@ public class Main {
                     System.out.println("Tipo de Mapa seleccionado: " + MapType);
                     ImplementLinked implementLinked = new ImplementLinked();
                     datosMapa = lector.leerDatosArchivo(implementLinked.createLinkedMap());
+                    funcionalidades = new Funcionalidades(datosMapa);
                     break;
                 
                 case "4":
