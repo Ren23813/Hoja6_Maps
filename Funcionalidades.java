@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -11,12 +14,21 @@ public class Funcionalidades {
     }
 
     public void agregarNuevaCarta(Scanner scanner, Map<String, String> datosMapa) {
-        System.out.println("\nAGREGAR NUEVA CARTAA");
+        System.out.println("\nAGREGAR NUEVA CARTA");        //VALIDAR 
         System.out.print("- Ingrese el nombre de la nueva carta que desee agregar: ");
         String nombre = scanner.nextLine();
         System.out.print("- Ingrese el tipo de la nueva carta: ");
         String tipo = scanner.nextLine();
         cartaMap.put(nombre, tipo);
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("cards_desc.txt",true))) {
+            String linea = nombre + "|" + tipo;
+            bw.write(linea);
+            bw.newLine();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         System.out.println("La carta ha sido agregada.");
     }
 
